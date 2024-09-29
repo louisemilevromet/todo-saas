@@ -22,7 +22,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 
-import { getUser, updateUser } from "@/lib/actionsUser";
+import { getUser, updateUser, deleteUser } from "@/lib/actionsUser";
 
 const PageSettings = async () => {
   const user = await getUser();
@@ -108,9 +108,15 @@ const PageSettings = async () => {
               </AlertDialogHeader>
               <AlertDialogFooter>
                 <AlertDialogCancel>Cancel</AlertDialogCancel>
-                <AlertDialogAction className="bg-red-600 text-white hover:bg-red-700">
-                  Delete Account
-                </AlertDialogAction>
+                <form action={deleteUser}>
+                  <input type="hidden" value={user?.id} name="id" />
+                  <Button
+                    type="submit"
+                    className="bg-red-600 text-white hover:bg-red-700"
+                  >
+                    Delete Account
+                  </Button>
+                </form>
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>

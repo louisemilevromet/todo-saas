@@ -17,13 +17,7 @@ export const getStripeSession = async ({
     customer: customerId,
     mode: "subscription",
     billing_address_collection: "auto",
-
-    line_items: [
-      {
-        price: priceId,
-        quantity: 1,
-      },
-    ],
+    line_items: [{ price: priceId, quantity: 1 }],
     payment_method_types: ["card"],
     customer_update: {
       address: "auto",
@@ -32,6 +26,5 @@ export const getStripeSession = async ({
     success_url: `${domainUrl}/dashboard/payments/success`,
     cancel_url: `${domainUrl}/dashboard/payments/cancel`,
   });
-
   return session.url as string;
 };

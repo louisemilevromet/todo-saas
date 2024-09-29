@@ -2,8 +2,8 @@
 import { prisma } from "@/lib/db";
 import { getStripeSession } from "@/lib/stripe";
 import { redirect } from "next/navigation";
-import { getUser } from "./actionsUser";
 import { stripe } from "@/lib/stripe";
+import { getUser } from "./actionsUser";
 
 export const getDataStripeUser = async (userId: string) => {
   const data = await prisma.subscription.findUnique({
@@ -24,17 +24,8 @@ export const getDataStripeUser = async (userId: string) => {
 };
 
 export const createSubscription = async () => {
-  // Récupérer l'utilisateur connecté
   const user = await getUser();
 
-  if (!user) {
-    console.error("Aucun utilisateur trouvé !");
-    return;
-  }
-
-  console.log("Utilisateur qui s'abonne :", user); // Log des données de l'utilisateur
-
-  // Récupérer les informations Stripe de l'utilisateur depuis la base de données
   const dbUser = await prisma.user.findUnique({
     where: {
       id: user?.id,
@@ -44,18 +35,12 @@ export const createSubscription = async () => {
     },
   });
 
-  console.log("Informations Stripe de l'utilisateur :", dbUser);
-
-  // Créer une session de paiement Stripe pour cet utilisateur
   const subscriptionUrl = await getStripeSession({
     customerId: dbUser?.stripeCustomerId as string,
     domainUrl: "http://localhost:3000",
     priceId: process.env.STRIPE_API_ID as string,
   });
 
-  console.log("URL de la session d'abonnement Stripe :", subscriptionUrl);
-
-  // Rediriger l'utilisateur vers la page de paiement
   return redirect(subscriptionUrl);
 };
 

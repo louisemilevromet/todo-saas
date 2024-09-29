@@ -34,7 +34,7 @@ export default async function DashboardLayout({
   return (
     <div className="flex h-screen bg-gradient-to-br from-purple-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
       {/* Sidebar Navigation for Desktop */}
-      <div className="hidden md:block w-64 z-50">
+      <div className="hidden md:block w-64">
         <DashboardNav />
       </div>
 
