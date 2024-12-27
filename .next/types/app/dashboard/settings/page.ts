@@ -1,4 +1,4 @@
-// File: /Users/louis-emilevromet/Documents/Personnel/Dev/todo-saas/app/dashboard/settings/page.tsx
+// File: /Users/louis-emilevromet/Documents/Personnel/Dev/Saas/todo-saas/app/dashboard/settings/page.tsx
 import * as entry from '../../../../../app/dashboard/settings/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

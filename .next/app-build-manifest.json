@@ -26,6 +26,11 @@
       "static/chunks/main-app.js",
       "static/chunks/app/dashboard/payments/page.js"
     ],
+    "/dashboard/payments/success/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/payments/success/page.js"
+    ],
     "/dashboard/settings/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -40,11 +45,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/dashboard/tasks/task/[id]/page.js"
-    ],
-    "/dashboard/payments/success/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/dashboard/payments/success/page.js"
     ]
   }
 }

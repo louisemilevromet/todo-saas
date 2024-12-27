@@ -25,9 +25,6 @@ export default async function SubscribePage() {
   const user = await getUser();
   const dataStripe = await getDataStripeUser(user?.id as string);
 
-  console.log(dataStripe, "iciiii");
-  console.log(user, "user");
-
   if (dataStripe?.status === "active") {
     return (
       <div className="container mx-auto px-4 py-8">

@@ -1,4 +1,4 @@
-// File: /Users/louis-emilevromet/Documents/Personnel/Dev/todo-saas/app/dashboard/payments/success/page.tsx
+// File: /Users/louis-emilevromet/Documents/Personnel/Dev/Saas/todo-saas/app/dashboard/payments/success/page.tsx
 import * as entry from '../../../../../../app/dashboard/payments/success/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
