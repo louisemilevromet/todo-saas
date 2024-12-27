@@ -48,7 +48,7 @@ export const createCustomerPortal = async () => {
   const user = await getUser();
   const session = await stripe.billingPortal.sessions.create({
     customer: user?.stripeCustomerId as string,
-    return_url: "http://localhost:3000/dashboard/payments",
+    return_url: "https://todo-saas-lime.vercel.app/dashboard/payments",
   });
   return redirect(session.url);
 };

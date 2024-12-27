@@ -35,7 +35,7 @@ export function DashboardNav() {
   const router = useRouter();
   const pathname = usePathname();
   return (
-    <nav className="relative h-screen border-r border-gray-200 bg-gradient-to-br from-purple-50 to-indigo-100 dark:border-gray-800 dark:from-gray-900 dark:to-gray-800">
+    <nav className="relative hidden md:block h-screen border-r border-gray-200 bg-gradient-to-br from-purple-50 to-indigo-100 dark:border-gray-800 dark:from-gray-900 dark:to-gray-800">
       <ScrollArea className="h-full py-6 pl-4 pr-6">
         <div className="mb-4 space-y-1">
           <h2 className="px-2 text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
