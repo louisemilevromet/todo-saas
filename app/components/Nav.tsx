@@ -53,11 +53,11 @@ export default function Navbar() {
         <div className="flex items-center space-x-4">
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/logo.png"
+              src="/todo-saas.png"
               alt="TaskMaster Logo"
               width={30}
               height={30}
-              className="h-8 w-8"
+              className="h-8 w-8 rounded-md"
             />
             <span className="font-bold text-gray-900 dark:text-white inline-block">
               TaskMaster
